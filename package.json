@@ -1,0 +1,44 @@
+{
+  "name": "react-components",
+  "version": "1.0.0",
+  "description": "Collection of reusable React components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node devServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremyraffin/react-components.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "components"
+  ],
+  "author": "Jeremy Raffin @JeremyRaffin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremyraffin/react-components/issues"
+  },
+  "homepage": "https://github.com/jeremyraffin/react-components",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.0",
+    "eslint": "^2.2.0",
+    "eslint-plugin-babel": "^3.1.0",
+    "eslint-plugin-react": "^4.0.0",
+    "express": "^4.13.4",
+    "webpack": "^1.12.13",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.7.1"
+  }
+}
