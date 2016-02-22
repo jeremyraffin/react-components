@@ -10,7 +10,7 @@ export default class FilterableList extends Component {
         let items = []
 
         this.props.items.forEach(item => {
-            if(item.name.indexOf(this.props.filterText) === -1) {
+            if(item.name.toLowerCase().indexOf(this.props.filterText) === -1) {
                 return
             }
             items.push(<li key={item.name}>{item.name}</li>)
