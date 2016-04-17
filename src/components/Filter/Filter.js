@@ -1,31 +1,19 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 import InputFilter from './InputFilter.js';
 import FilterableList from './FilterableList.js';
 
-export default class Filter extends Component {
-    constructor(props){
-        super(props);
-    }
+export default function Filter (props) {
 
-    render() {
-
-        return (
-            <div>
-                <form>
-                    <fieldset>
-                        <InputFilter filterText={this.props.filterText} handleChange={this.props.handleChange} />
-                    </fieldset>
-                </form>
-                <FilterableList className='Demo' items={this.props.items} filterText={this.props.filterText} />
-            </div>
-        );
-    }
-
-    handleChange(filterText){
-        this.setState({
-            filterText: filterText
-        });
-    }
+    return (
+        <div>
+            <form>
+                <fieldset>
+                    <InputFilter filterText={props.filterText} handleChange={props.handleChange} />
+                </fieldset>
+            </form>
+            <FilterableList className='Demo' items={props.items} filterText={props.filterText} />
+        </div>
+    );
 }
 
 Filter.propTypes = {

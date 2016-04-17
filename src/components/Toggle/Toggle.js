@@ -1,19 +1,14 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class Toggle extends Component {
-    constructor(props) {
-        super(props);
-    }
+export default function Toggle (props)  {
 
-    render() {
 
-        return (
-            <li style={this.props.toggle ? {} : {opacity: '0.5'}}>
-                {this.props.children}
-                <button onClick={this.props.handleClick}>{this.props.toggle ? 'I desactivate' : 'I activate'}</button>
-            </li>
-        )
-    }
+    return (
+        <li style={props.toggle ? {} : {opacity: '0.5'}}>
+            {props.children}
+            <button onClick={props.handleClick}>{props.toggle ? 'I desactivate' : 'I activate'}</button>
+        </li>
+    )
 }
 
 Toggle.propTypes = {

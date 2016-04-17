@@ -1,27 +1,21 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class FilterableList extends Component {
-    constructor(props) {
-        super(props);
-    }
+export default function FilterableList (props) {
 
-    render() {
+    let items = []
 
-        let items = []
-
-        this.props.items.forEach(item => {
-            if(item.name.toLowerCase().indexOf(this.props.filterText) === -1) {
-                return
-            }
+    props.items.forEach(item => {
+        if(item.name.toLowerCase().indexOf(props.filterText) !== -1) {
             items.push(<li key={item.name}>{item.name}</li>)
-        })
+        }
 
-        return (
-            <ul className={this.props.className}>
-                {items}
-            </ul>
-        )
-    }
+    })
+
+    return (
+        <ul className={props.className}>
+            {items}
+        </ul>
+    )
 }
 
 FilterableList.propTypes = {

@@ -1,31 +1,20 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class InputFilter extends Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-    }
+export default function InputFilter (props) {
 
-    render() {
-        return (
-            <div className="Filter">
-                <label htmlFor="filter">Filter</label>
-                <input
-                    type="search"
-                    id="filter"
-                    name="filter"
-                    placeholder="Filter..."
-                    value={this.props.filterText}
-                    ref="filter"
-                    onChange={this.handleChange}
-                />
-            </div>
-        )
-    }
-
-    handleChange() {
-        this.props.handleChange(this.refs.filter.value)
-    }
+    return (
+        <div className="Filter">
+            <label htmlFor="filter">Filter</label>
+            <input
+                type="search"
+                id="filter"
+                name="filter"
+                placeholder="Filter..."
+                value={props.filterText}
+                onChange={props.handleChange}
+            />
+        </div>
+    )
 }
 
 InputFilter.propTypes = {
