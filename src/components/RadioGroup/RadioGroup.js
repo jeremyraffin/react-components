@@ -8,12 +8,12 @@ export default function RadioGroup (props) {
             {props.items.map((item,index) => {
 
                 return <Radio
-                    key={index}
-                    name={item.name}
-                    value={item.name}
-                    group={props.group}
-                    defaultChecked={item.defaultChecked}
-                    handleChange={props.handleChange}
+                        key={index}
+                        name={item.name}
+                        value={item.name}
+                        group={props.group}
+                        defaultChecked={item.defaultChecked}
+                        onChange={props.onChange}
                     />
             })}
         </div>
@@ -22,7 +22,9 @@ export default function RadioGroup (props) {
 
 
 RadioGroup.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.object),
-    onChange: PropTypes.func
-}
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
+    group: PropTypes.string.isRequired,
+    defaultChecked: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired
+};
 

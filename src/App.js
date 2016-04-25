@@ -28,16 +28,18 @@ export class App extends Component {
                 {name: 'item2'},
                 {name: 'item3'}
             ],
-            selectedRadio: 'item1',
+            selectedRadio: 'item1'
         }
     }
 
     render() {
         
         const toggleItems = this.state.toggleItems.map(item => {
-            return <Toggle key={item.id} toggle={item.active} handleClick={this.handleToggle.bind(this, item)}>
-                        {item.name}
-                    </Toggle>
+            return  <li>
+                        <Toggle key={item.id} active={item.active} onClick={this.handleToggle.bind(this, item)}>
+                            {item.name}
+                        </Toggle>
+                    </li>
         });
 
         return (
@@ -58,7 +60,7 @@ export class App extends Component {
                     </section>
                     <section>
                         <h2>RadioGroup</h2>
-                        <RadioGroup group="demo" items={this.state.radioItems} handleChange={this.handleRadioChange} />
+                        <RadioGroup group="demo" items={this.state.radioItems} onChange={this.handleRadioChange} />
                     </section>
                 </main>
             </div>

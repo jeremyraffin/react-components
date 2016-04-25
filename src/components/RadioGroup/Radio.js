@@ -9,7 +9,7 @@ export default function Radio (props) {
                    name={props.group}
                    value={props.name}
                    defaultChecked={props.defaultChecked}
-                   onChange={props.handleChange}
+                   onChange={props.onChange}
             />
                 {props.name}
         </label>
@@ -18,8 +18,10 @@ export default function Radio (props) {
 
 
 Radio.propTypes = {
-    name: PropTypes.string,
-    group: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    group: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    defaultChecked: PropTypes.bool,
     checked: PropTypes.bool
-}
+};
 
